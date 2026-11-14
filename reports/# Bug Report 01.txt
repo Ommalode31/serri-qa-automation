@@ -1,0 +1,32 @@
+# Bug Report 01
+
+Bug Title: Template creation fails with “Token not authorized” error.
+
+Bug ID: SERRI-001  
+Module: Templates  
+Environment: Serri CRM Beta  
+Browser: Chromium  
+
+Precondition: User is logged into the application.
+
+Steps to Reproduce:
+1. Open the Serri CRM application.
+2. Navigate to the Templates module.
+3. Click Create Template.
+4. Enter the required template details.
+5. Submit the template.
+
+Expected Result:  
+The template should be created successfully and appear in the Templates list.
+
+Actual Result:  
+The application displays the error message: `Token not authorized`. The template is not created.
+
+Reproducibility: Reproduced twice.
+
+Severity: Medium (provisional)  
+Priority: High (provisional)
+
+Status: Open – Requires investigation.
+
+Note: This may be related to BSP authorization or integration configuration. Further investigation is required to confirm the root cause.

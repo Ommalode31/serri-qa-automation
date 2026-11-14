@@ -1,0 +1,66 @@
+ QA Test Strategy – Serri CRM
+
+1. Objective
+The objective is to validate the core functionality, usability, and reliability of the Serri CRM application, focusing on the Contacts, Templates, and Campaigns modules.
+
+2. Testing Scope
+
+In Scope:
+- Login and dashboard navigation.
+- Contacts: search, filtering, clearing filters, adding contacts, and duplicate phone number validation.
+- Templates: template creation, required fields, and template listing.
+- Campaigns: campaign creation flow and template selection.
+- Basic UI validation and error handling.
+
+Out of Scope:
+- Billing, analytics, team inbox, settings, and live WhatsApp messaging.
+
+ 3. Testing Approach
+
+Testing will be performed using a combination of manual and automated testing.
+
+- Functional Testing: Verify that each feature behaves according to requirements.
+- UI Testing: Validate page elements, buttons, forms, and navigation.
+- Negative Testing: Test invalid inputs, missing required fields, and duplicate phone numbers.
+- Integration Testing: Verify interactions between Contacts, Templates, and Campaigns.
+- Automation Testing: Use Playwright with JavaScript to automate login and Contacts module checks.
+- Regression Testing: Re-run previously passed test cases after fixes or updates.
+
+ 4. Test Environment and Tools
+
+- Application: Serri CRM Beta
+- Browser: Chromium
+- Automation: Playwright
+- Language: JavaScript
+- Test Reporting: Playwright HTML Report
+- Environment variables: `.env` for credentials.
+
+5. Defect Reporting
+
+Each defect will include:
+- Bug ID and title.
+- Module and environment.
+- Preconditions and steps to reproduce.
+- Expected and actual results.
+- Severity and priority.
+- Screenshots or execution logs.
+- Reproducibility status.
+
+Defects will be reproduced at least twice before being reported as confirmed issues.
+
+6. Risks and Mitigation
+
+- Authentication issues: Verify authorization and report integration failures separately.
+- Test data conflicts: Use candidate-prefixed synthetic test data.
+- **Template dependency:** Campaign testing may be blocked if template creation fails.
+- **Environment instability:** Record errors and execution logs for further investigation.
+
+ 7. Entry and Exit Criteria
+
+Entry: Application access, valid test credentials, and test environment availability.
+
+Exit: All planned test cases are executed, results are documented, reproducible defects are reported, and blocked test cases are clearly identified.
+
+ 8. Deliverables
+
+Playwright automation scripts, test execution report, reproducible bug reports, and this test strategy document.
